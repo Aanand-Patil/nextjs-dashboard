@@ -13,13 +13,16 @@ import { Button } from './ui/button'
 import { LogOut, Moon, Settings, Sun, User } from 'lucide-react'
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'
 import { useTheme } from 'next-themes'
+import { SidebarTrigger } from './ui/sidebar'
 
 const Navbar = () => {
   const { theme, setTheme } = useTheme()
+
   return (
     <nav className='p-4 flex items-center justify-between sticky top-0 bg-background z-10'>
       {/* LEFT */}
-      button
+      <SidebarTrigger />
+
       {/* RIGHT */}
       <div className='flex items-center gap-4'>
         <Link href='/'>Dashboard</Link>
@@ -48,7 +51,7 @@ const Navbar = () => {
         <DropdownMenu>
           <DropdownMenuTrigger>
             <Avatar>
-              <AvatarImage src='https://avatars.githubusercontent.com/u/1486366' />
+              <AvatarImage src='https://png.pngtree.com/template/20190905/ourmid/pngtree-a-logo-simple-and-minimalistic-image_301991.jpg' />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
           </DropdownMenuTrigger>
